@@ -1,0 +1,110 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 520px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #1a202c;
+  margin-bottom: 24px;
+}
+
+.add-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.add-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.add-form input:focus { border-color: #4f46e5; }
+
+.add-form button {
+  padding: 10px 20px;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-form button:hover { background: #4338ca; }
+
+.todo-list { list-style: none; }
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 12px;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 0.97rem;
+  color: #2d3748;
+}
+
+.todo-item.done .task-text {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+.actions { display: flex; gap: 8px; }
+
+.btn-toggle, .btn-delete {
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.btn-toggle { background: #ebf4ff; color: #2b6cb0; }
+.btn-toggle:hover { background: #bee3f8; }
+
+.btn-delete { background: #fff5f5; color: #c53030; }
+.btn-delete:hover { background: #fed7d7; }
+
+.empty {
+  text-align: center;
+  color: #a0aec0;
+  padding: 32px 0;
+  font-size: 0.95rem;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 0.82rem;
+  color: #a0aec0;
+}
