@@ -1,94 +1,25 @@
-# 📝 Flask To-Do App
+# flask-todo-app
 
-A simple, clean To-Do web app built with Python + Flask. Ready to run locally in VS Code, push to GitHub, and deploy on Azure.
+A simple to-do list web app built with Python and Flask.
 
----
+## About
 
-## 📁 Project Structure
+I built this project to practice Python web development. The app lets you manage your daily tasks in a clean and simple interface.
 
-```
-flask-todo-app/
-├── app.py                  # Main Flask application
-├── requirements.txt        # Python dependencies
-├── Procfile                # For Azure/Gunicorn deployment
-├── .gitignore
-├── templates/
-│   └── index.html          # UI template
-├── static/
-│   └── style.css           # Styling
-└── .github/
-    └── workflows/
-        └── azure-deploy.yml  # Auto-deploy to Azure on git push
-```
+## How it works
 
----
+- Type a task and hit Add
+- Mark it done when completed
+- Undo it if needed
+- Delete it when you no longer need it
+- Shows total completed tasks at the bottom
 
-## 🚀 Run Locally (VS Code)
+## Tech used
 
-### 1. Open in VS Code
-```bash
-cd flask-todo-app
-code .
-```
+- Python
+- Flask
+- HTML and CSS
 
-### 2. Create a virtual environment
-```bash
-python -m venv venv
-```
+## Deployment
 
-Activate it:
-- **Windows:** `venv\Scripts\activate`
-- **Mac/Linux:** `source venv/bin/activate`
-
-### 3. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the app
-```bash
-python app.py
-```
-
-Open your browser at: **http://localhost:5000**
-
----
-
-## 🐙 Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: Flask To-Do App"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
-```
-
----
-
-## ☁️ Deploy on Azure
-
-### Option A — Azure Portal (easiest first time)
-
-1. Go to [portal.azure.com](https://portal.azure.com)
-2. Create a **Web App** → choose Python 3.11 → Linux
-3. In **Deployment Center** → choose GitHub → authorize → select your repo + `main` branch
-4. Azure auto-generates the workflow and deploys on every push ✅
-
-### Option B — GitHub Actions (already configured)
-
-1. In Azure Portal → your Web App → **Get Publish Profile** → download the `.PublishSettings` file
-2. In your GitHub repo → **Settings → Secrets → Actions** → add:
-   - `AZURE_WEBAPP_NAME` → your Azure app name (e.g. `my-todo-app`)
-   - `AZURE_PUBLISH_PROFILE` → paste the full contents of the `.PublishSettings` file
-3. Push to `main` — GitHub Actions deploys automatically 🚀
-
----
-
-## ✅ Features
-- Add tasks
-- Mark tasks as done / undo
-- Delete tasks
-- Task counter (X / Y completed)
-- Data stored in `todos.json` (no database needed)
+Deployed on Microsoft Azure using GitHub Actions. Every push to main branch automatically updates the live app.
